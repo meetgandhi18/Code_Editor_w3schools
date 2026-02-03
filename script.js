@@ -1,16 +1,13 @@
-let btn = document.getElementById('btn')
+function runCode() {
+    const html = document.getElementById("htmlCode").value;
+    const css = document.getElementById("cssCode").value;
+    const js = document.getElementById("jsCode").value;
 
-btn.addEventListener("click",()=>{
-    const coin = document.getElementById("coin");
-    const resultText = document.getElementById("result");
+    const output = document.getElementById("output");
 
-    coin.classList.remove("flip");
-    void coin.offsetWidth;
-    coin.classList.add("flip");
-
-    setTimeout(() => {
-        const toss = Math.random() < 0.5 ? "Heads" : "Tails";
-        coin.textContent = toss;
-        resultText.textContent = "Result: " + toss;
-    }, 500);
-})
+    output.contentDocument.body.innerHTML = `
+        <style>${css}</style>
+        ${html}
+        <script>${js}<\/script>
+    `;
+}

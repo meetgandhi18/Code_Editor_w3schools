@@ -2,23 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Toss Flip App</title>
+    <title>Mini Code Editor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🪙 Toss Flip App</h1>
+<h1>💻 Mini Code Editor (Like W3Schools)</h1>
 
-        <div id="coin" class="coin">
-            Heads
-        </div>
+<div class="editor-container">
 
-        <button id="btn">Flip Coin</button>
-
-        <p id="result"></p>
+    <div class="editor">
+        <h3>HTML</h3>
+        <textarea id="htmlCode"></textarea>
     </div>
 
-    <script src="script.js"></script>
+    <div class="editor">
+        <h3>CSS</h3>
+        <textarea id="cssCode"></textarea>
+    </div>
+
+    <div class="editor">
+        <h3>JavaScript</h3>
+        <textarea id="jsCode"></textarea>
+    </div>
+
+</div>
+
+<button onclick="runCode()">▶ Run Code</button>
+
+<h2>Output</h2>
+<iframe id="output"></iframe>
+
+<script src="script.js"></script>
 </body>
 </html>
