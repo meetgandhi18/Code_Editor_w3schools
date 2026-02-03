@@ -3,7 +3,7 @@ function flipCoin() {
     const resultText = document.getElementById("result");
 
     coin.classList.remove("flip");
-    void coin.offsetWidth; // restart animation
+    void coin.offsetWidth;
     coin.classList.add("flip");
 
     setTimeout(() => {
