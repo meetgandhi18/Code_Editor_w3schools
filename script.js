@@ -1,4 +1,6 @@
-function flipCoin() {
+let btn = document.getElementById('btn')
+
+btn.addEventListener("click",()=>{
     const coin = document.getElementById("coin");
     const resultText = document.getElementById("result");
 
@@ -11,4 +13,4 @@ function flipCoin() {
         coin.textContent = toss;
         resultText.textContent = "Result: " + toss;
     }, 500);
-}
+})
